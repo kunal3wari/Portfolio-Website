@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    color: #fff;
+    background-color: #b200ff;
+}
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 400px;
+    line-height: 1.5;
+    color: #f9f9f9;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to right, #e50914 50%, #fff 50%);
+}
+
+.sidebar {
+    width: 80px;
+    background-color: #f4c542;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.sidebar a {
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none;
+    margin: 10px 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transition: color 0.3s ease; 
+}
+
+
+.sidebar a:hover {
+    color: #fff; 
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.about-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #333; 
+    background-color: #ff00a1; 
+    line-height: 1.6;
+    border-bottom: 1px solid #333;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.about-section hr {
+    margin: 20px auto;
+    width: 50px;
+    border: 1px solid #333;
+}
+
+
+.offer-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.offer-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.offer-section ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.offer-section li {
+    margin-bottom: 10px;
+}
+
+
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.contact-section button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.contact-section button:hover {
+    background-color: #555;
+    color: #000; 
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-section .form-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: #999;
+}
+
+.contact-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p, .offer-section ul {
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar a {
+        font-size: 0.9rem;
+    }
+
+    .contact-section .form-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
