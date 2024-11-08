@@ -37,6 +37,16 @@ p {
     color: #f9f9f9;
 }
 
+
+.sour-gummy {
+    font-family: 'Sour Gummy', sans-serif;
+}
+.permanent-marker {
+    font-family: 'Permanent Marker', cursive;
+}
+.cormorant-garamond {
+    font-family: 'Cormorant Garamond', serif;
+}
 .bottom-bar {
     position: absolute;
     bottom: 0;
