@@ -1,48 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>The Gaming Hub</title>
+    <title>Contact - The Gaming Hub</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div class="page-wrapper">
+        <main class="main-content">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="glitch-container">
+                            <h1 class="glitch" data-text="Get in Touch">Get in Touch</h1>
+                        </div>
+                        <p class="tagline">Let's Level Up Together</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="icon">📧</span>
+                                <p>thegaminghub82@gmail.com</p>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/the_gaminghubk/" class="social-item" target="_blank">
+                                    <img src="insta.png" alt="Instagram">
+                                    <span>Follow us on Instagram</span>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCnzAHFNj1ArYaBuGXyao95Q" class="social-item" target="_blank">
+                                    <img src="yt.png" alt="YouTube">
+                                    <span>Subscribe on YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="contact-container">
-  <div class="contact-content">
-    <div class="contact-info">
-      <h2 class="Cormorant-Garamond">Hey There</h2>
-      <p class="sour-gummy">Have questions or feedback? We'd love to hear from you! Reach out to us.</p>
-      <p class="Cormorant-Garamond">thegaminghub82@gmail.com</p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/the_gaminghubk/" target="_blank">
-          <img src="insta.png" alt="Instagram Icon">
-      </a>
-      <a href="https://www.youtube.com/channel/UCnzAHFNj1ArYaBuGXyao95Q" target="_blank">
-          <img src="yt.png" alt="YouTube Icon">
-      </a>
-      </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Your Name</label>
+                                <div class="line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Your Email</label>
+                                <div class="line"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" required></textarea>
+                                <label for="message">Your Message</label>
+                                <div class="line"></div>
+                            </div>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="floating-elements">
+                    <div class="floating-icon">🎮</div>
+                    <div class="floating-icon">🏆</div>
+                    <div class="floating-icon">⚔️</div>
+                    <div class="floating-icon">🎲</div>
+                    <div class="floating-icon">🎯</div>
+                    <div class="floating-icon">⭐</div>
+                    <div class="floating-icon">🎨</div>
+                    <div class="floating-icon">🎧</div>
+                </div>
+            </div>
+        </main>
+
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
     </div>
 
-    <div class="contact-form">
-      <form action="#" method="POST">
-        <input class="sour-gummy" type="text" name="name" placeholder="Name *" required>
-        <input  class="sour-gummy"type="email" name="email" placeholder="Email *" required>
-        <textarea  class="sour-gummy"name="message" placeholder="Message" rows="4"></textarea>
-        <button  class="sour-gummy"type="submit">Send</button>
-      </form>
-    </div>
-  </div>
-</div>
+    <div class="cursor"></div>
 
+    <script>
+        const cursor = document.querySelector('.cursor');
 
-<div class="sidebar">
-    <a class="Cormorant-Garamond" href="index.html">Home</a> 
-    <a class="Cormorant-Garamond" href="about.html">About</a>
-    <a class="Cormorant-Garamond" href="contact.html">Contact</a> 
-</div>
+        document.addEventListener('mousemove', (e) => {
+            requestAnimationFrame(() => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+        });
 
+        document.querySelectorAll('a, button, input, textarea').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
